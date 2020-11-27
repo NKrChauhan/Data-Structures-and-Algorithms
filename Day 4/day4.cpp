@@ -71,7 +71,7 @@ struct node *floorBST(struct node *head,struct node *prev,int data){
     struct node *temp=floorBST(head->left,prev,data);
     if(head->data==data) return head;
     if(head->data>data) return temp;
-    if(head->data<data){
+    else{
         prev=head;
         return floorBST(head->right,prev,data);
     }
