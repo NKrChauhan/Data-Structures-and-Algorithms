@@ -13,7 +13,15 @@
     int maxPathSum(struct node *head);
 
 ```
-
+### The node structure is a bit different used in the problems
+```sh 
+    struct node{
+        int data;
+        struct node *left=NULL;
+        struct node *right=NULL;
+        struct node *next=NULL;
+    };
+```
 ### The funtion applied from day 3:
 ```sh   
     void printNodesInorder(struct node *head);
@@ -24,19 +32,9 @@
 
 ```
 
-### The funtion applied from day 3:
-```sh   
-    struct avlnode *findMax(struct avlnode *head);
-    
-    struct avlnode *findMin(struct avlnode *head);
-    
-    struct avlnode *deleteNode(struct avlnode *head,int data);
-
-```
-
 ## Output:
 ```sh
-        Inorder print: 1, 2, 3, 4, 5, 6, 8, 9, 
+    Inorder print: 1, 2, 3, 4, 5, 6, 8, 9, 
     This proves that non recurrsive function works fine to connect levels: 6
     Maximum path sum is given as follows: 35
     This proves that recurrsive function works fine to connect levels: 9
