@@ -24,7 +24,7 @@
     
     void resizeHeap(struct Heap *h);
     
-    void destroyHeap(struct Heap *h);
+    struct Heap *destroyHeap(struct Heap *h);
     
     void buildHeap(struct Heap *h, int b[], int n);
     
