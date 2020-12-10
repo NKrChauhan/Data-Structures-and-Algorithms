@@ -27,6 +27,9 @@ void resizeHeap(struct Heap *h);
 struct Heap* destroyHeap(struct Heap *h);
 void buildHeap(struct Heap *h, int b[], int n);
 void heapSort(int a[], int n);
+// Day 9
+int kthMax(struct Heap *h,int k);
+int getKthMax(struct Heap *h,int k);
 
 // Function definition
 struct Heap *createHeapArray(int s,int type){
@@ -154,6 +157,23 @@ void heapSort(int a[], int n){
     buildHeap(h,a,n);
     for(int i=n-1;i>=0;i--) cout<<deleteMax(h)<<", ";
 }
+
+// Day 9 
+// delete the heap max k-1 times and we get kth at last
+int kthMax(struct Heap *h,int k){
+    // O(logn) complexity
+    for(int i=0;i<k-1;i++)
+        deleteMax(h);
+    return h->a[0];
+}
+
+// this is to not let the deletion of data from the heap
+int getKthMax(struct Heap *h,int k){
+    struct Heap *temp=createHeapArray(h->hSize,h->hType);
+    buildHeap(temp,h->a,h->count);
+    return kthMax(temp,k);
+}
+
 
 int main(int argc, char const *argv[]){
     int b[]={2,4,6,9,5,10,7,11,12};
