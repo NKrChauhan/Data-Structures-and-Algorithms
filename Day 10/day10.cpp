@@ -16,7 +16,7 @@ void insertionSort(int a[],int n);
 void shellSort(int a[] ,int n);
 void merge(int l[],int l_size, int r[], int r_size, int a[]);
 void mergeSort(int a[] ,int n);
-int partition(int a[]);
+int partition(int a[],int l, int r);
 void quickSort(int a[], int l, int r);
 void countingSort(int a[] ,int n, int b[], int k);
 void bucketSort(int a[] ,int n);

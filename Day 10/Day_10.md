@@ -20,7 +20,7 @@
     
     void mergeSort(int a[] ,int n);
     
-    int partition(int a[]);
+    int partition(int a[],int l, int r);
     
     void quickSort(int a[], int l, int r);
     
