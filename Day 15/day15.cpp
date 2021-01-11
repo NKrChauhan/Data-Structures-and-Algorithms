@@ -88,7 +88,7 @@ void kSmallestElements(int a[], int n, int k){
 
 // also a form of selection
 int kthSmallestElement(int a[], int n, int k){
-int low=0,high=n-1;
+    int low=0,high=n-1;
     if(k<n){
         while(high>low){
             int pivot = partition(a,low,high);
@@ -96,7 +96,8 @@ int low=0,high=n-1;
             else if(k<pivot+1) high = pivot-1;
             else low = pivot+1;
         }
-    }else cout<<"ERROR"<<endl;
+    }
+    return -1;
 }
 
 int findMedian2Array(int a[], int a_l, int a_h, int b[], int b_l, int b_h ){
